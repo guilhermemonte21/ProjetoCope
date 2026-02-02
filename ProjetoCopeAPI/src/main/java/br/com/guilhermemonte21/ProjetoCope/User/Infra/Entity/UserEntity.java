@@ -1,5 +1,6 @@
 package br.com.guilhermemonte21.ProjetoCope.User.Infra.Entity;
 
+import br.com.guilhermemonte21.ProjetoCope.User.Domain.Entity.User;
 import br.com.guilhermemonte21.ProjetoCope.User.Domain.Enum.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
