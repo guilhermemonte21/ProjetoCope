@@ -2,7 +2,9 @@ package br.com.guilhermemonte21.ProjetoCope.User.Application.UseCase.FindUserByE
 
 import br.com.guilhermemonte21.ProjetoCope.User.Application.Gateway.UserGateway;
 import br.com.guilhermemonte21.ProjetoCope.User.Domain.Entity.User;
+import org.springframework.stereotype.Service;
 
+@Service
 public class FindByEmail implements IFindByEmail{
 
     private final UserGateway gateway;

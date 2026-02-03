@@ -5,7 +5,9 @@ import br.com.guilhermemonte21.ProjetoCope.User.Application.UseCase.FindUserByEm
 import br.com.guilhermemonte21.ProjetoCope.User.Application.UseCase.Login.ILogin;
 import br.com.guilhermemonte21.ProjetoCope.User.Domain.Entity.User;
 import org.springframework.security.access.AccessDeniedException;
+import org.springframework.stereotype.Service;
 
+@Service
 public class DesativarConta implements IDesativarConta{
 
     private final ILogin login;

@@ -6,7 +6,9 @@ import br.com.guilhermemonte21.ProjetoCope.User.Application.UseCase.Login.ILogin
 import br.com.guilhermemonte21.ProjetoCope.User.Domain.Entity.User;
 import br.com.guilhermemonte21.ProjetoCope.User.Domain.Enum.Role;
 import org.springframework.security.access.AccessDeniedException;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CreateInstrutorAccount implements ICreateInstrutorAccount{
     private final ILogin login;
     private final FindByEmail findByEmail;

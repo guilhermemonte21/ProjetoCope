@@ -4,9 +4,11 @@ import br.com.guilhermemonte21.ProjetoCope.User.Application.Gateway.UserGateway;
 import br.com.guilhermemonte21.ProjetoCope.User.Domain.Entity.User;
 import br.com.guilhermemonte21.ProjetoCope.User.Infra.Repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
+import org.springframework.stereotype.Component;
 
 import java.util.UUID;
 
+@Component
 public class UserGatewayImpl implements UserGateway {
     private final UserRepository repository;
 

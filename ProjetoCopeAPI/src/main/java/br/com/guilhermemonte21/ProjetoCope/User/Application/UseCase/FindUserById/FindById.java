@@ -2,17 +2,17 @@ package br.com.guilhermemonte21.ProjetoCope.User.Application.UseCase.FindUserByI
 
 import br.com.guilhermemonte21.ProjetoCope.User.Application.Gateway.UserGateway;
 import br.com.guilhermemonte21.ProjetoCope.User.Domain.Entity.User;
-import br.com.guilhermemonte21.ProjetoCope.User.Infra.MapperInfra.UserMapperInfra;
+import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
+@Service
 public class FindById implements IFindById{
 
-    private final UserMapperInfra mapperInfra;
+
     private final UserGateway gateway;
 
-    public FindById(UserMapperInfra mapperInfra, UserGateway gateway) {
-        this.mapperInfra = mapperInfra;
+    public FindById( UserGateway gateway) {
         this.gateway = gateway;
     }
 
