@@ -5,5 +5,5 @@ import br.com.guilhermemonte21.ProjetoCope.Plataform.Domain.Enum.Dificulty;
 
 import java.util.UUID;
 
-public record CreateLessonDTO(String Title, UUID videoId) {
+public record CreateLessonDTO(String Title, String videoId) {
 }

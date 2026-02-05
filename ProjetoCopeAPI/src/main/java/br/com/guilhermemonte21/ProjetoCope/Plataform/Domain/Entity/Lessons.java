@@ -26,7 +26,7 @@ public class Lessons {
 
 
     @Column(name = "video_id")
-    private UUID videoId;
+    private String videoId;
 
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "module_id")
