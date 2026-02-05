@@ -3,11 +3,12 @@ import Header from "../components/Header";
 
 export default function DefaultLayout() {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Header />
-      <main style={{ padding: "20px" }}>
+      {/* main agora ocupa todo o espaço restante */}
+      <main className="flex-1">
         <Outlet />
       </main>
-    </>
+    </div>
   );
 }
