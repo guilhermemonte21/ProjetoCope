@@ -1,5 +1,6 @@
 package br.com.guilhermemonte21.ProjetoCope.Plataform.Domain.Entity;
 
+import br.com.guilhermemonte21.ProjetoCope.Plataform.Domain.Enum.Dificulty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -29,6 +30,10 @@ public class Course {
     @Column(columnDefinition = "TEXT")
     private String description;
 
+    @Column
+    @Enumerated(EnumType.STRING)
+    private Dificulty dificulty;
+
     @OneToMany(
             mappedBy = "course",
             cascade = CascadeType.ALL,
@@ -47,9 +52,12 @@ public class Course {
         this.updatedAt = LocalDateTime.now();
     }
 
-    public void addModule(Modules module) {
+    public Modules addModule(String title) {
+        Modules module = new Modules();
+        module.setTitle(title);
         module.setCourse(this);
         modules.add(module);
+        return module;
     }
 
     public void removeModule(UUID moduleId) {

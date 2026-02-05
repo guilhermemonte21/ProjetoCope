@@ -1,5 +1,6 @@
 package br.com.guilhermemonte21.ProjetoCope.Plataform.Domain.Entity;
 
+import br.com.guilhermemonte21.ProjetoCope.Plataform.Domain.Enum.Dificulty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,8 +24,6 @@ public class Lessons {
     @Column(nullable = false)
     private String title;
 
-    @Column(nullable = false)
-    private Integer position;
 
     @Column(name = "video_id")
     private UUID videoId;

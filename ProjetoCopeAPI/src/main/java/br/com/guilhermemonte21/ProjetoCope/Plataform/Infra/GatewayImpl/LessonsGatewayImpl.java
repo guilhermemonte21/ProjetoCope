@@ -14,11 +14,10 @@ import java.util.UUID;
 @Component
 public class LessonsGatewayImpl implements LessonsGateway {
     private final LessonsRepository repository;
-    private final ModulesRepository modRepository;
 
-    public LessonsGatewayImpl(LessonsRepository repository, ModulesRepository modRepository) {
+
+    public LessonsGatewayImpl(LessonsRepository repository) {
         this.repository = repository;
-        this.modRepository = modRepository;
     }
 
     @Override
@@ -50,9 +49,6 @@ public class LessonsGatewayImpl implements LessonsGateway {
 
     @Override
     public List<Lessons> findAllByModule(UUID idModule) {
-        Modules mod = modRepository.findById(idModule).orElseThrow(
-                () ->  new EntityNotFoundException("Modulo não encontrado")
-        );
-        return mod.getLessons();
+        return repository.findAllByModuleId(idModule);
     }
 }

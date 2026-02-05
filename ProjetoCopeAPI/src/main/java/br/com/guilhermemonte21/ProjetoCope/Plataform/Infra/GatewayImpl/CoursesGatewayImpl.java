@@ -39,7 +39,7 @@ public class CoursesGatewayImpl implements CoursesGateway {
 
     @Override
     public List<Course> findByIdInstrutor(UUID id) {
-        List<Course> courses = repository.findByIdInstrutor(id);
+        List<Course> courses = repository.findAll();
 
         return courses;
     }
