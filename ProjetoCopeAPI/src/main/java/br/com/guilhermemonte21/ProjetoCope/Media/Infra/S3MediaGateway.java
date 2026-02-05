@@ -1,6 +1,7 @@
 package br.com.guilhermemonte21.ProjetoCope.Media.Infra;
 
 import br.com.guilhermemonte21.ProjetoCope.Media.Domain.MediaGateway;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import software.amazon.awssdk.services.s3.model.GetObjectRequest;
 import software.amazon.awssdk.services.s3.model.PutObjectRequest;
@@ -11,15 +12,13 @@ import java.time.Duration;
 
 @Component
 public class S3MediaGateway implements MediaGateway {
-
     private final S3Presigner presigner;
     private final String bucket;
 
-    public S3MediaGateway(S3Presigner presigner, String bucket) {
+    public S3MediaGateway(S3Presigner presigner, @Value("${aws.s3.bucket}") String bucket) {
         this.presigner = presigner;
         this.bucket = bucket;
     }
-
     @Override
     public String generateUploadUrl(String key, String contentType) {
 

@@ -5,5 +5,5 @@ import br.com.guilhermemonte21.ProjetoCope.Plataform.Domain.Entity.Lessons;
 import java.util.UUID;
 
 public interface ICreateLesson {
-    Lessons Create(UUID Module, CreateLessonDTO dto);
+    Lessons Create(UUID Module, String Title);
 }

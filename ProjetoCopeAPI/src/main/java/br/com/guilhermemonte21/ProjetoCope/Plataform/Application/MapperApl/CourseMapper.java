@@ -3,9 +3,11 @@ package br.com.guilhermemonte21.ProjetoCope.Plataform.Application.MapperApl;
 import br.com.guilhermemonte21.ProjetoCope.Plataform.Application.DTO.CreateCourseDTO;
 import br.com.guilhermemonte21.ProjetoCope.Plataform.Domain.Entity.Course;
 import br.com.guilhermemonte21.ProjetoCope.Plataform.Domain.Entity.Lessons;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 
+@Component
 public class CourseMapper {
 
     public Course toDomain(CreateCourseDTO curso){
