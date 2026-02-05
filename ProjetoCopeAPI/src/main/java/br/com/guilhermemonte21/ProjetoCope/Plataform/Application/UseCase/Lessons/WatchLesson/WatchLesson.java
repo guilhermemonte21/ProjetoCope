@@ -1,10 +1,8 @@
 package br.com.guilhermemonte21.ProjetoCope.Plataform.Application.UseCase.Lessons.WatchLesson;
 
 import br.com.guilhermemonte21.ProjetoCope.Media.Domain.MediaGateway;
-import br.com.guilhermemonte21.ProjetoCope.Plataform.Application.DTO.CreateLessonDTO;
 import br.com.guilhermemonte21.ProjetoCope.Plataform.Application.Gateway.LessonsGateway;
 import br.com.guilhermemonte21.ProjetoCope.Plataform.Domain.Entity.Lessons;
-import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;

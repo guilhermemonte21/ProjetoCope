@@ -1,6 +1,5 @@
 package br.com.guilhermemonte21.ProjetoCope.Plataform.Application.UseCase.Lessons.CreateLesson;
 
-import br.com.guilhermemonte21.ProjetoCope.Plataform.Application.DTO.CreateLessonDTO;
 import br.com.guilhermemonte21.ProjetoCope.Plataform.Application.Gateway.ModulesGateway;
 import br.com.guilhermemonte21.ProjetoCope.Plataform.Domain.Entity.Lessons;
 import br.com.guilhermemonte21.ProjetoCope.Plataform.Domain.Entity.Modules;
@@ -16,9 +15,9 @@ public class CreateLesson implements ICreateLesson{
 
 
     @Override
-    public Lessons Create(UUID Module, CreateLessonDTO dto) {
+    public Lessons Create(UUID Module, String Title) {
         Modules mod = gateway.findById(Module);
-        Lessons lessons = mod.addLesson(dto);
+        Lessons lessons = mod.addLesson(Title);
         gateway.save(mod);
         return lessons;
     }

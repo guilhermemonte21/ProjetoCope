@@ -1,6 +1,5 @@
 package br.com.guilhermemonte21.ProjetoCope.Plataform.Domain.Entity;
 
-import br.com.guilhermemonte21.ProjetoCope.Plataform.Application.DTO.CreateLessonDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -38,11 +37,10 @@ public class Modules {
     private List<Lessons> lessons = new ArrayList<>();
 
 
-    public Lessons addLesson(CreateLessonDTO dto) {
+    public Lessons addLesson(String Title) {
         Lessons lesson = new Lessons();
         lesson.setModule(this);
-        lesson.setTitle(dto.Title());
-        lesson.setVideoId(dto.videoId());
+        lesson.setTitle(Title);
         lessons.add(lesson);
         return lesson;
     }
